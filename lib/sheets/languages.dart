@@ -24,12 +24,16 @@ class languageSheet extends StatelessWidget{
                 },
                 child: Text(AppLocalizations.of(context)!.english,style:
 
-                TextStyle(color:provider.changeLanguage=="en"? Color(0xffB7935F):Colors.black,fontSize: 30)),
+                TextStyle(color:provider.languageCode=="en"? Color(0xffB7935F):Colors.black,fontSize: 30)),
               ),
-              if(provider.languageCode=="en")...[
-                Icon(Icons.done,color: provider.changeLanguage=="en"? Color(0xffB7935F):Colors.black,)
-              ]
-              // provider.changeLanguage=="en"? Icon(Icons.done,size: 30,color: Color(0xffB7935F),):SizedBox()
+              provider.languageCode=="en"
+                  ? Icon(
+                Icons.done,
+                size: 30,
+                color: Color(0xffB7935F),
+              )
+                  : SizedBox()
+
             ],
           )
           ,
@@ -43,15 +47,19 @@ class languageSheet extends StatelessWidget{
                 },
                 child: Text(AppLocalizations.of(context)!.arabic,
                     style: TextStyle(
-                        color:provider.changeLanguage=="en"?Colors.black: Color(0xffB7935F),
+                        color:provider.languageCode=="en"?Colors.black: Color(0xffB7935F),
 
                         fontSize: 30)
 
                 ),
               ),
-              if(provider.languageCode=="ar")...[
-                Icon(Icons.done,color: provider.changeLanguage=="ar"? Color(0xffB7935F):Color(0xffB7935F),)
-              ]
+              provider.languageCode=="ar"
+                  ? Icon(
+                Icons.done,
+                size: 30,
+                color: Color(0xffB7935F),
+              )
+                  : SizedBox()
               // provider.changeLanguage=="en"?SizedBox():
               // Icon(Icons.done,size:30,color:Color(0xffB7935F) ,)
             ],

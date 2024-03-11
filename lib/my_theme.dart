@@ -40,7 +40,11 @@ bodyLarge: TextStyle(
   )
   )
   );
+
+
+
  static ThemeData darkTheme= ThemeData(
+   brightness: Brightness.dark,
      appBarTheme: AppBarTheme(
          backgroundColor: Colors.transparent,
          centerTitle: true,
